@@ -11,6 +11,10 @@ class academia(models.Model):
      value = fields.Integer()
      value2 = fields.Float(compute="_value_pc", store=True)
      description = fields.Text()
+    
+state = fields.Selection(selection=[('draft', 'New'),('approve', 'Approved'),('confirm', 'Confirmed'),('cancel', 'Cancelled'),('done', 'Done'),], string='State', default='draft')
+
+select = fields.Selection(selection=[('a', 'A')])
 #
 #     @api.depends('value')
 #     def _value_pc(self):
