@@ -24,11 +24,11 @@
     </record>
 
 
-    <!-- server action to the one above 
+    <!-- server action to the one above -->
 
     <record model="ir.actions.server" id="academia.action_server">
       <field name="name">academia server</field>
-      <field name="model_id" ref="model_academia_academia"/>
+      <field name="model_id" ref="model_academia_alumnos"/>
       <field name="state">code</field>
       <field name="code">
         action = {
@@ -37,18 +37,21 @@
           "res_model": model._name,
         }
       </field>
-    </record>-->
+    </record>
 
 
     <!-- Top menu item -->
+      
   <menuitem name="Academia" id="academia_main"/>
+      
     <menuitem id="usuarios_clase"
                   parent="academia_main"
                   action="academia.action_window"
                   name="Alumnos"/>
-    <menuitem name="academia" id="academia.menu_root"/>
+      
+    <!-- <menuitem name="academia" id="academia.menu_root"/>
 
-    <!-- menu categories 
+    menu categories 
 
     <menuitem name="Menu 1" id="academia.menu_1" parent="academia.menu_root"/>
     <menuitem name="Menu 2" id="academia.menu_2" parent="academia.menu_root"/>
